@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.solar_system{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+}
+
+.sun{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: goldenrod;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    background: radial-gradient(circle at 100px 100px, gold, #fef);
+    box-shadow: 0 0 4rem rgba(255, 255, 0);
+
+
+}
+.planet{
+    width: 50px;
+    position: fixed;
+    transform-origin: bottom;
+    transform: translateX(-50%) translateY(-50%);
+}
+.earth {
+    left: calc(50% - 25px);
+    top: calc(50% - 17rem);
+    height: 17rem;
+    transform-origin: bottom;
+    animation: ROTATION 4s linear infinite;
+
+}
+.earth::after{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "";
+    height: 50px;
+    width: 50px;
+    /* background-color: ; */
+    z-index: 11;
+    margin: auto;
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 100px 100px,#fff, #5cabff, #000);
+}
+.mars{
+    position: fixed;
+    animation: ROTATION 8s linear infinite;
+    height: 22rem;
+    left: calc(50% - 25px);
+    top: calc(50% - 22rem);
+    /* background-color: lightblue; */
+    
+}
+.mars::after{
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "";
+    height: 60px;
+    width: 60px;
+    z-index: 11;
+    margin: auto;
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 100px 100px,#fff,coral , #222);
+
+}
+.mercury{
+    /* background-color: orangered; */
+    position: fixed;
+    animation: ROTATION 2s linear infinite;
+    height: 10rem;
+    left: calc(50% - 25px);
+    top: calc(50% - 10rem);
+    /* top: -15rem; */
+}
+.mercury::after{
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "";
+    height: 40px;
+    width: 40px;
+    z-index: 11;
+    margin: auto;
+    position: absolute;
+    /* color: ; */
+    border-radius: 50%;
+    background: radial-gradient(circle at 100px 100px,#fff, orangered, #222);
+
+}
+
+.venus{
+    /* background-color: orangered; */
+    position: fixed;
+    animation: ROTATION 3s linear infinite;
+    height: 13.5rem;
+    left: calc(50% - 25px);
+    top: calc(50% - 13.5rem);
+    /* top: -15rem; */
+}
+.venus::after{
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "";
+    height: 50px;
+    width: 50px;
+    z-index: 11;
+    margin: auto;
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 100px 100px,#fff,peru , #222);
+
+}
+
+@keyframes ROTATION {
+
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+
+    }
+}
